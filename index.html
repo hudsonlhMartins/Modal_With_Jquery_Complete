@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="ct-test">
+        <h3>Teste modal</h3>
+        <div class="content">
+
+            <button data-open-modal="#modal-custom">
+                Clique aqui
+            </button>
+        </div>
+        <br>
+        <div>
+            <button data-open-modal="#modal-custom-2"> Buttom 2 </button>
+        </div>
+    </div>
+
+
+    <!-- MODAL 1 DE EXEMPLO  -->
+    <div id="modal-custom" class="modal-custom">
+        <header class="header-modal-custom">
+            <h3>Madl modal-custom</h3>
+            <span class="close-modal-custom">x</span>
+        </header>
+
+        <div class="content modal">
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda impedit ad natus sint provident. Accusantium hic incidunt cum. Quis dicta sed accusantium dolores nobis, eius vero labore explicabo. Error, quibusdam.</p>
+
+        </div>
+
+        <footer class="footer-modal-custom">
+            <button>Ok</button>
+        </footer>
+    </div>
+
+    <!-- MODAL 2 DE EXEMPLO  -->
+    <div id="modal-custom-2" class="modal-custom">
+        <header class="header-modal-custom">
+            <h3>Madal modal-custom 12</h3>
+            <span class="close-modal-custom">x</span>
+        </header>
+
+        <div class="content modal">
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda impedit ad natus sint provident. Accusantium hic incidunt cum. Quis dicta sed accusantium dolores nobis, eius vero labore explicabo. Error, quibusdam.</p>
+
+        </div>
+
+        <footer class="footer-modal-custom">
+            <button>Ok</button>
+        </footer>
+    </div>
+
+
+    <!-- MASCARA TEM QUE FICAR NO BODY  -->
+    <div id="mascaraCustomModal"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

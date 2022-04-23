@@ -1,0 +1,64 @@
+.modal-custom {
+  position: fixed;
+  z-index: 9999;
+  width: 50vw;
+  height: auto;
+  left: 25vw;
+  top: 50vh;
+  background: #fff;
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%);
+  padding: 2rem 1rem;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: 4px 4px 8px #0002;
+          box-sizing: 4px 4px 8px #0002;
+  border-radius: 5px;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.modal-custom.visible {
+  opacity: 1;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: initial;
+}
+
+.modal-custom .header-modal-custom {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal-custom .header-modal-custom .close-modal-custom {
+  position: absolute;
+  right: -0.8rem;
+  top: -1.8rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+#mascaraCustomModal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  bottom: 0;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-custom.visible ~ #mascaraCustomModal {
+  opacity: 0.5;
+  pointer-events: initial;
+}
+/*# sourceMappingURL=style.css.map */

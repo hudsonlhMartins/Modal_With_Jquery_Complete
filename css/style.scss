@@ -1,0 +1,57 @@
+.modal-custom{
+    position: fixed;
+    z-index: 9999;
+    width: 50vw;
+    height: auto;
+    left: 25vw;
+    top: 50vh;
+    background: #fff;
+    transform: translateY(-25%);
+    padding: 2rem 1rem;
+    border: 1px solid #ccc;
+    box-sizing: 4px 4px 8px #0002;
+    border-radius: 5px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+
+    &.visible{
+        opacity: 1;
+        transform: translateY(-50%);
+        pointer-events: initial;
+    }
+
+    .header-modal-custom{
+        position: relative;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+
+        .close-modal-custom{
+            position: absolute;
+            right: -0.8rem;
+            top: -1.8rem;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+    }
+}
+
+// essa id tem que esta no html e css clobal dentro do body
+#mascaraCustomModal{
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    bottom: 0;
+    background: #000;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-custom.visible ~ #mascaraCustomModal{
+    // vai selecionar o id que o filha posterior que tem essa class
+    opacity: 0.5;
+    pointer-events: initial;
+
+}
