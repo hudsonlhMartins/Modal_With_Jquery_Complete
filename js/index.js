@@ -2,6 +2,7 @@ $(document).ready(function() {
     clickBtnOpenModal()
     closeModalCustom()
     hideModalToMascara()
+    hideModalWithEsc()
 });
 
 
@@ -18,22 +19,51 @@ function clickBtnOpenModal() {
 
 /*==  ESSA FUNCTION NÃO PRECISA INICIAR QUANDO A PAGINA FOR CARREGADA ==*/
 function openModalCustom(item){
-    let modal = $(item)
+    var modal = $(item)
     $(modal).addClass('visible')
 }
 
 function closeModalCustom() {
     $('.close-modal-custom').click(function(e) {
-        let modal = $(e.target).parent().parent()
-        $(modal).removeClass('visible')
+        var element = $(e).closest('.modal-custom').prevObject[0].currentTarget
+        var modalAtual = $(element).closest('.modal-custom')
+        modalAtual.removeClass('visible')
     })
 }
 
 function hideModalToMascara(){
     var mascara = $('#mascaraCustomModal')
     $(mascara).click(function() {
-        let modalAtual = $('.modal-custom.visible')
-        $(modalAtual).removeClass('visible')
+        var modalAll = $('.modal-custom.visible')
+        if(modalAll.length > 0){
+            var endModal = modalAll.length -1
+            var modalAtual = modalAll[endModal]
+            $(modalAtual).removeClass('visible')
+        }
+    })
+}
 
+
+/*  ESSE METADO E SO QUANDO VC PRECISA TER UM MODAL DENTRO DE OUTRO E QUERER VOLTA PARA 
+    O MODAL ANTERIOR 
+*/
+function backPreventModal(e){
+    var element = e.target
+    var modalAtual = $(element).closest('.modal-custom')
+    modalAtual.removeClass('visible')
+}
+
+
+// Fechar o modal com a teclar ESC
+function hideModalWithEsc(){
+    $('body').keyup(function(event) {
+        if(event.which == 27){
+            var allModal = $('.modal-custom.visible')
+            if(allModal.length > 0){
+                var endModal = allModal.length -1
+                var modalAtual = allModal[endModal]
+                $(modalAtual).removeClass('visible')
+            }
+        }
     })
 }
