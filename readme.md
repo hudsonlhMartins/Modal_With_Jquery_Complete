@@ -3,7 +3,7 @@
 <br/>
 
 # Para criar um modal
-## vc precisa no button que vai abrir o modal ter um data-open-modal e esse valor tem que esta tbm no id do modal que vc quer abrir. **Importante para mascara funcionar e o escorinho que fica por traz do modal essa div com id "mascaraCustomModal" tem que esta no body do html**
+## vc precisa no button que vai abrir o modal ter um data-open-modal e esse valor tem que esta tbm no id do modal que vc quer abrir. **Importante para mascara funcionar e o escurinho que fica por traz do modal essa div com id "mascaraCustomModal" tem que esta no body do html**
 ![Alt ou título da imagem](./assets/explicacao/btn_data.png)
 
 <br/>
