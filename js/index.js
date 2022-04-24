@@ -1,10 +1,21 @@
 $(document).ready(function() {
+    modalCustom()
+});
+
+
+
+
+/*
+==========================  FUNÇÕES PARA O MODAL  ==========================
+*/
+
+/*== AQUI E TODAS FUNCTION QUE TEM QUE INICAR QUANDO A TELA FOR CARREGADA ==*/
+function modalCustom(){
     clickBtnOpenModal()
     closeModalCustom()
     hideModalToMascara()
     hideModalWithEsc()
-});
-
+}
 
 
 function clickBtnOpenModal() {
@@ -44,7 +55,8 @@ function hideModalToMascara(){
 }
 
 
-/*  ESSE METADO E SO QUANDO VC PRECISA TER UM MODAL DENTRO DE OUTRO E QUERER VOLTA PARA 
+/* 
+    ESSE METADO E SO QUANDO VC PRECISA TER UM MODAL DENTRO DE OUTRO E QUERER VOLTA PARA 
     O MODAL ANTERIOR 
 */
 function backPreventModal(e){
@@ -54,7 +66,7 @@ function backPreventModal(e){
 }
 
 
-// Fechar o modal com a teclar ESC
+// Fechar o modal com a tecla ESC
 function hideModalWithEsc(){
     $('body').keyup(function(event) {
         if(event.which == 27){
@@ -67,3 +79,7 @@ function hideModalWithEsc(){
         }
     })
 }
+
+/*
+==========================  END MODAL  ==========================
+*/

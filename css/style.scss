@@ -1,3 +1,11 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    box-sizing: border-box;
+}
+
 .modal-custom{
     position: fixed;
     z-index: 9999;
@@ -37,7 +45,6 @@
     }
 }
 
-// essa id tem que esta no html e css clobal dentro do body
 #mascaraCustomModal{
     position: fixed;
     left: 0;
@@ -55,3 +62,50 @@
     pointer-events: initial;
 
 }
+
+@media (max-width: 1280px){
+    .modal-custom{
+        left: 23vw;
+    }
+}
+
+@media (max-width: 500px){
+    .modal-custom{
+        width: 80vw;
+        left: 5.5vw;
+    }
+}
+
+
+
+
+/*
+    ##############   CUSTOMIZAÇÕES  ###################
+*/
+
+//ICON FECHA
+.modal-custom{
+    .header-modal-custom{
+        .close-modal-custom{
+            svg{
+
+            }
+        }
+    }
+}
+
+// CONTEUDO
+.modal-custom{
+    .content-modal{
+
+    }
+}
+
+// FOOTER ONDE FICA OS BOTÕES
+.modal-custom{
+    .footer-modal-custom{
+
+    }
+}
+
+

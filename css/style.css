@@ -1,3 +1,14 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .modal-custom {
   position: fixed;
   z-index: 9999;
@@ -61,4 +72,21 @@
   opacity: 0.5;
   pointer-events: initial;
 }
+
+@media (max-width: 1280px) {
+  .modal-custom {
+    left: 23vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .modal-custom {
+    width: 80vw;
+    left: 5.5vw;
+  }
+}
+
+/*
+    ##############   CUSTOMIZAÇÕES  ###################
+*/
 /*# sourceMappingURL=style.css.map */
